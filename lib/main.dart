@@ -1,3 +1,4 @@
+import 'package:dartquizz/src/screens.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
+      home: HomeScreen(),
     );
   }
 }
