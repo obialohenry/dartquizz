@@ -10,8 +10,20 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  //An Icon//
+                  Row(
+                    children: [
+                      //An Icon//
+                    ],
+                  ),
+                ],
+              ),
+              Container()
           ],
         ),
       ),),
