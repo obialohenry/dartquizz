@@ -1,4 +1,4 @@
-import 'package:dartquizz/config/app_string.dart';
+import 'package:dartquizz/config/app_strings.dart';
 import 'package:dartquizz/src/config.dart';
 import 'package:flutter/material.dart';
 
