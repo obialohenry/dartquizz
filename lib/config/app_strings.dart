@@ -1,3 +1,10 @@
 const roboto = "Roboto";
-const helloMate = 'Hello mate';
+const helloMate = 'Hello mate,';
 const whatDoYouWantToLearnToday = "What Do You Want To Learn Today?";
+const learn = "Learn";
+const home = "Home";
+const progress = "Progress";
+const profile = "Profile";
+const whatWouldYouLikeToLearnToday = "What Would You Like To Learn Today?";
+const fiveQuizzes = "5 quizzes";
+const fifteenMins = "15 mins";

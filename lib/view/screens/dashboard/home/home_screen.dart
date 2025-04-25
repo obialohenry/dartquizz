@@ -19,10 +19,10 @@ class HomeScreen extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TextView(text: "Hello mate,", color: Colors.white70),
+                TextView(text: helloMate, color: Colors.white70),
                 Gap(8),
                 TextView(
-                  text: "What Would You Like To Learn Today?",
+                  text: whatWouldYouLikeToLearnToday,
                   maxLines: 2,
                   fontWeight: FontWeight.bold,
                   fontSize: 24.spMin,
@@ -139,7 +139,7 @@ class QuizzCard extends StatelessWidget {
                         children: [
                           Icon(Icons.quiz, size: 16.spMin, color: Colors.grey),
                           Gap(4),
-                          TextView(text: '5 quizzes', fontSize: 12.spMin, color: Colors.grey),
+                          TextView(text: fiveQuizzes, fontSize: 12.spMin, color: Colors.grey),
                         ],
                       ),
                       Gap(16),
@@ -147,7 +147,7 @@ class QuizzCard extends StatelessWidget {
                         children: [
                           Icon(Icons.access_time, size: 16.spMin, color: Colors.grey),
                           Gap(4),
-                          TextView(text: '15 mins', fontSize: 12.spMin, color: Colors.grey),
+                          TextView(text: fifteenMins, fontSize: 12.spMin, color: Colors.grey),
                         ],
                       ),
                     ],
