@@ -13,14 +13,14 @@ Future<dynamic> logInAlertDialog(context) {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextView(
-              text: "Hi..",
+              text: hi,
               fontSize: 18.spMin,
               fontWeight: FontWeight.bold,
               color: AppColors.kCharcoalBlack,
             ),
             Gap(4),
             TextView(
-              text: "Please login before starting the quiz.",
+              text: pleaseLoginBeforeStartingTheQuiz,
               fontSize: 14.spMin,
               color: AppColors.kSteelGray,
             ),
@@ -30,7 +30,7 @@ Future<dynamic> logInAlertDialog(context) {
           Align(
             alignment: Alignment.bottomRight,
             child: TextView(
-              text: "Alright",
+              text: alright,
               color: AppColors.kRoyalIndigo,
               fontSize: 16.spMin,
               onTap: () {

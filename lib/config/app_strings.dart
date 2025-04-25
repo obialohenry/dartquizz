@@ -8,3 +8,6 @@ const profile = "Profile";
 const whatWouldYouLikeToLearnToday = "What Would You Like To Learn Today?";
 const fiveQuizzes = "5 quizzes";
 const fifteenMins = "15 mins";
+const hi = 'Hi..';
+const pleaseLoginBeforeStartingTheQuiz = 'Please login before starting the quiz.';
+const alright = 'Alright';
