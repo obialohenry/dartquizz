@@ -2,11 +2,16 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static const kWhite = Colors.white;
-  static const kPrimaryGradientLavenderMist = LinearGradient(
+  static const kPrimaryGradientTwilightGlow = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
-    colors: [Color(0xFFF1E6FF), Color(0xFFE4D0F2), Color(0xFFD7BAE9)],
+    colors: [Color(0xFF3F51B5), Color(0xFFF5F7FA)],
   );
   static const kPaleLavender = Color(0xffFBF5FF);
   static const kDeepPurple = Color(0xff530080);
+  static const kWhisperGray = Color(0xFFF5F7FA);
+  static const kRoyalIndigo = Color(0xFF3F51B5);
+  static const kCosmicBlue = Color(0xFF3F51B5);
+  static const kCharcoalBlack = Color(0xff212121);
+  static const kSteelGray = Color(0xff757575);
 }

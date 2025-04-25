@@ -1,4 +1,3 @@
-import 'package:dartquizz/config/app_strings.dart';
 import 'package:dartquizz/src/config.dart';
 import 'package:flutter/material.dart';
 
@@ -55,7 +54,7 @@ class TextView extends StatelessWidget {
               fontSize: fontSize != null ? fontSize! : 16.spMin,
               fontWeight: fontWeight ?? FontWeight.w500,
               // color: color ?? AppColors.kTextBlack,
-              color: color ?? Theme.of(context).colorScheme.primary,
+              color: color ?? AppColors.kWhite,
               // (themeMode == ThemeMode.dark
               // ? Theme.of(context).textTheme.bodySmall!.color
               // : Theme.of(context).primaryColor),
