@@ -1,5 +1,6 @@
 import 'package:dartquizz/src/components.dart';
 import 'package:dartquizz/src/config.dart';
+import 'package:dartquizz/view/screens/log_in_screen.dart';
 import 'package:flutter/material.dart';
 
 Future<dynamic> logInAlertDialog(context) {
@@ -35,6 +36,7 @@ Future<dynamic> logInAlertDialog(context) {
               fontSize: 16.spMin,
               onTap: () {
                 Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
               },
             ),
           ),

@@ -11,3 +11,5 @@ const fifteenMins = "15 mins";
 const hi = 'Hi..';
 const pleaseLoginBeforeStartingTheQuiz = 'Please login before starting the quiz.';
 const alright = 'Alright';
+const learnWithQuizzes = 'Learn with quizzes';
+const signInWithGoogle = 'Sign in with Google';
