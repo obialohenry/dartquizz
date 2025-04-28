@@ -1,6 +1,7 @@
 
 import 'package:dartquizz/src/components.dart';
 import 'package:dartquizz/src/config.dart';
+import 'package:dartquizz/src/utils.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -18,7 +19,7 @@ class LoginScreen extends StatelessWidget {
                 alignment: Alignment.topLeft,
                 child: IconButton(
                   icon: Icon(Icons.arrow_back, color: AppColors.kWhite),
-                  onPressed: () => Navigator.pop(context),
+                  onPressed: () => navigateBack(context),
                 ),
               ),
               Expanded(
