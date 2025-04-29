@@ -10,6 +10,16 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.kWhisperGray,
+      appBar: AppBar(
+        backgroundColor: AppColors.kRoyalIndigo,
+        title: TextView(text: learn, fontWeight: FontWeight.bold, fontSize: 20.spMin),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.notifications_none, color: AppColors.kWhite),
+          ),
+        ],
+      ),
       body: Container(
         decoration: BoxDecoration(gradient: AppColors.kPrimaryGradientTwilightGlow),
         padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 15.w),

@@ -18,7 +18,7 @@ class LoginScreen extends StatelessWidget {
               Align(
                 alignment: Alignment.topLeft,
                 child: IconButton(
-                  icon: Icon(Icons.arrow_back, color: AppColors.kWhite),
+                  icon: Icon(Icons.arrow_back_ios, color: AppColors.kWhite),
                   onPressed: () => navigateBack(context),
                 ),
               ),

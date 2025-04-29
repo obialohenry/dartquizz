@@ -20,4 +20,5 @@ class AppColors {
   static const kCosmicBlue = Color(0xFF3F51B5);
   static const kCharcoalBlack = Color(0xff212121);
   static const kSteelGray = Color(0xff757575);
+  static const kFlameOrange = Color(0xFFFF5722);
 }

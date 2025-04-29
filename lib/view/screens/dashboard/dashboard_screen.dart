@@ -1,4 +1,3 @@
-import 'package:dartquizz/src/components.dart';
 import 'package:dartquizz/src/config.dart';
 import 'package:dartquizz/src/providers.dart';
 import 'package:flutter/material.dart';
@@ -11,16 +10,6 @@ class DashboardScreen extends ConsumerWidget {
     final dashboardProvider = ref.watch(dashboardViewModel);
     return Scaffold(
       backgroundColor: AppColors.kWhisperGray,
-      appBar: AppBar(
-        backgroundColor: AppColors.kRoyalIndigo,
-        title: TextView(text: learn, fontWeight: FontWeight.bold, fontSize: 20.spMin),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.notifications_none, color: AppColors.kWhite),
-          ),
-        ],
-      ),
       body: dashboardProvider.dashboardScreen[dashboardProvider.currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: [
