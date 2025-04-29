@@ -44,8 +44,9 @@ class ProgressScreen extends StatelessWidget {
 }
 
 class QuestionNumberButton extends StatelessWidget {
-  const QuestionNumberButton({super.key, required this.questionNumber});
+  const QuestionNumberButton({super.key, required this.questionNumber, this.isAnswered = false});
   final int questionNumber;
+  final bool isAnswered;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -55,14 +56,18 @@ class QuestionNumberButton extends StatelessWidget {
       // margin: EdgeInsets.only(right: 8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12.r),
-        color: AppColors.kWhite,
-        border: Border.all(color: Colors.grey.shade300, width: 1),
+        color:
+            isAnswered ? AppColors.kRoyalIndigo.withAlpha((255 * 0.1).toInt()) : AppColors.kWhite,
+        border: Border.all(
+          color: isAnswered ? AppColors.kRoyalIndigo : Colors.grey.shade300,
+          width: 1,
+        ),
       ),
       child: TextView(
         text: questionNumber.toString(),
         fontSize: 18.spMin,
         fontWeight: FontWeight.bold,
-        color: Colors.grey,
+        color: isAnswered ? AppColors.kRoyalIndigo : Colors.grey,
       ),
     );
   }
