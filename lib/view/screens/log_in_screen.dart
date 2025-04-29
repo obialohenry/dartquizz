@@ -36,7 +36,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         child: Icon(Icons.book, size: 60, color: AppColors.kRoyalIndigo),
                       ),
-                      SizedBox(height: 24),
+                      Gap(24),
                       TextView(text: learnWithQuizzes, color: Colors.white70, fontSize: 16),
                       Gap(48),
 

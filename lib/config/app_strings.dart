@@ -18,3 +18,4 @@ const downloadSourceCode = "Download Source Code";
 const contactMe = "Contact Me";
 const web = "Web";
 const email = "Email";
+const sisu = "SISU";

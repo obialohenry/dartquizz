@@ -29,7 +29,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               Gap(16),
               TextView(
-                text: "SISU",
+                text: sisu,
                 fontSize: 24.spMin,
                 fontWeight: FontWeight.bold,
                 color: AppColors.kCharcoalBlack,
