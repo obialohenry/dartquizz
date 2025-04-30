@@ -12,6 +12,7 @@ class DashboardScreen extends ConsumerWidget {
       backgroundColor: AppColors.kWhisperGray,
       body: dashboardProvider.dashboardScreen[dashboardProvider.currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: home),
           BottomNavigationBarItem(icon: Icon(Icons.bar_chart), label: progress),

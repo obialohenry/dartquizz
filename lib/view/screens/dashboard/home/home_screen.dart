@@ -1,5 +1,7 @@
 import 'package:dartquizz/src/components.dart';
 import 'package:dartquizz/src/config.dart';
+import 'package:dartquizz/src/screens.dart';
+import 'package:dartquizz/src/utils.dart';
 import 'package:dartquizz/utils/alert.dart';
 import 'package:flutter/material.dart';
 
@@ -48,7 +50,8 @@ class HomeScreen extends StatelessWidget {
                       return QuizzCard(
                         color: Colors.blue.withAlpha((0.9 * 255).toInt()),
                         onTap: () {
-                          logInAlertDialog(context);
+                          // logInAlertDialog(context);
+                          navigatePush(context, QuizQuestionScreen());
                         },
                         cardIcon: Icon(Icons.science_outlined, size: 32, color: Colors.black),
                         title: "Physics",
