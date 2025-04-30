@@ -90,7 +90,12 @@ class _QuizQuestionScreenState extends State<QuizQuestionScreen> {
                         ),
                       ),
                       TextView(text: "Q 02", fontSize: 18.spMin, fontWeight: FontWeight.bold),
-                      Icon(Icons.grid_view, color: AppColors.kWhite),
+                      IconButton(
+                        icon: Icon(Icons.grid_view, color: AppColors.kWhite),
+                        onPressed: () {
+                          //TODO:Navigate to the quiz progress screen, to see the progress of this particular quiz.
+                        },
+                      ),
                     ],
                   ),
                 ),
