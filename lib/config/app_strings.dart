@@ -19,3 +19,7 @@ const contactMe = "Contact Me";
 const web = "Web";
 const email = "Email";
 const sisu = "SISU";
+const congratulations = "Congratulations";
+const tapBelowQuestionNumberToViewAnswer = "Tap below question number to view correct answers";
+const tryAgain = "Try Again";
+const goHome = "Go to Home";
