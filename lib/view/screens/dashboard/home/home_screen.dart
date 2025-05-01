@@ -50,9 +50,8 @@ class HomeScreen extends StatelessWidget {
                       return QuizzCard(
                         color: Colors.blue.withAlpha((0.9 * 255).toInt()),
                         onTap: () {
-                          // logInAlertDialog(context);
-                          //TODO:A check for when a user has not logged in, so the login alert can display instead of the navigation to the quiz question screen.
-                          navigatePush(context, QuizResultScreen());
+                          logInAlertDialog(context);
+                          //TODO:A check for when a user has logged in, so the quiz question screen can be navigated to instead of the login alert to display.
                         },
                         cardIcon: Icon(Icons.science_outlined, size: 32, color: Colors.black),
                         title: "Physics",
