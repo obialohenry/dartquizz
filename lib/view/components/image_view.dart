@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:dartquizz/utils/enum.dart';
+import 'package:dartquizz/utils/enums.dart';
 
 class ImageView extends StatelessWidget {
   final String? url;

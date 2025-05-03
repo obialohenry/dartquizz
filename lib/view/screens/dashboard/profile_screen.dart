@@ -1,7 +1,6 @@
 import 'package:dartquizz/src/components.dart';
 import 'package:dartquizz/src/config.dart';
 import 'package:dartquizz/src/utils.dart';
-import 'package:dartquizz/utils/url_launcher.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
