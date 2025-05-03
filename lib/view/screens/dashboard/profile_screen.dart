@@ -1,6 +1,7 @@
 import 'package:dartquizz/src/components.dart';
 import 'package:dartquizz/src/config.dart';
 import 'package:dartquizz/src/utils.dart';
+import 'package:dartquizz/utils/url_launcher.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -45,22 +46,36 @@ class ProfileScreen extends StatelessWidget {
                       ProfileDetailItem(
                         icon: Icons.gif_box, //TODO:change to github icon.
                         title: myGitHub,
-                        onTap: () {},
-                    ),
+                        onTap: () {
+                          UrlLacncher().launchGitHubLink();
+                        },
+                      ),
                       ProfileDetailItem(
-                      icon: Icons.download,
+                        icon: Icons.download,
                         title: downloadSourceCode,
                         onTap: () {},
-                    ),
+                      ),
                       ProfileDetailItem(
-                      icon: Icons.contact_mail,
-                      title: contactMe, onTap: () {},
-                    ),
+                        icon: Icons.contact_mail,
+                        title: contactMe,
+                        onTap: () {
+                          UrlLacncher().makePhoneCall("08136496931");
+                        },
+                      ),
                       ProfileDetailItem(
-                      icon: Icons.language,
-                      title: web, onTap: () {},
-                    ),
-                      ProfileDetailItem(icon: Icons.mail, title: email, onTap: () {}),
+                        icon: Icons.language,
+                        title: web,
+                        onTap: () {
+                          UrlLacncher().openWhatsApp("08120052669");
+                        },
+                      ),
+                      ProfileDetailItem(
+                        icon: Icons.mail,
+                        title: email,
+                        onTap: () {
+                          UrlLacncher().sendEmail("obilaorchisomebi123@gmail.com");
+                        },
+                      ),
                     ],
                   ),
                 ),
