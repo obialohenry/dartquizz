@@ -1,13 +1,9 @@
-
-
 // import 'package:crypto_dart/crypto_dart.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:dartquizz/src/model.dart';
 import 'package:dartquizz/src/utils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-
 
 class SharedPreferenceProvider extends ChangeNotifier {
   late SharedPreferences sharedPreferences;
@@ -28,6 +24,12 @@ class SharedPreferenceProvider extends ChangeNotifier {
     sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setBool("firstTimeOnApp", false);
     logger.i("saved first time on app, nahh😂");
+  }
+
+  saveUserSignInStatusToLocalStorage() async {
+    sharedPreferences = await SharedPreferences.getInstance();
+    sharedPreferences.setBool("isSignedIn", true);
+    logger.i("User has signed in.");
   }
 
   saveAccountIDSubacriptionStatus() async {
@@ -101,10 +103,7 @@ class SharedPreferenceProvider extends ChangeNotifier {
 
   saveUserEncryptedPassword(String encryptedPassword) async {
     sharedPreferences = await SharedPreferences.getInstance();
-    sharedPreferences.setString(
-      "encryptedPassword",
-      encryptedPassword,
-    );
+    sharedPreferences.setString("encryptedPassword", encryptedPassword);
     logger.i("saved encrypted password $encryptedPassword");
   }
 
