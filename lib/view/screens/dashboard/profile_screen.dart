@@ -2,6 +2,7 @@ import 'package:dartquizz/src/components.dart';
 import 'package:dartquizz/src/config.dart';
 import 'package:dartquizz/src/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -43,7 +44,7 @@ class ProfileScreen extends StatelessWidget {
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
                       ProfileDetailItem(
-                        icon: Icons.gif_box, //TODO:change to github icon.
+                        isGitHubProfile: true,
                         title: myGitHub,
                         onTap: () {
                           UrlLacncher().launchGitHubLink();
@@ -90,19 +91,24 @@ class ProfileScreen extends StatelessWidget {
 class ProfileDetailItem extends StatelessWidget {
   const ProfileDetailItem({
     super.key,
-    required this.icon,
+    this.icon,
     required this.title,
     required this.onTap,
+    this.isGitHubProfile = false,
   });
   final VoidCallback onTap;
   final String title;
-  final IconData icon;
+  final IconData? icon;
+  final bool isGitHubProfile;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         ListTile(
-          leading: Icon(icon, color: AppColors.kRoyalIndigo),
+          leading:
+              isGitHubProfile
+                  ? FaIcon(FontAwesomeIcons.github, color: AppColors.kRoyalIndigo)
+                  : Icon(icon, color: AppColors.kRoyalIndigo),
           title: TextView(text: title, fontSize: 16.spMin, color: AppColors.kCharcoalBlack),
           trailing: Icon(Icons.chevron_right, color: Colors.grey),
           onTap: onTap,
