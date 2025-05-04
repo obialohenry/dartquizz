@@ -1,5 +1,6 @@
 import 'package:dartquizz/src/model.dart';
 import 'package:dartquizz/src/screens.dart';
+import 'package:dartquizz/src/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -11,6 +12,14 @@ class DashboardViewModel extends ChangeNotifier {
   checkUser() async {
     sharedPreferences = await SharedPreferences.getInstance();
     DummyData.isSignedIn = sharedPreferences.getBool("isSignedIn") ?? false;
+  }
+
+  void checkUserSignedIn(context) {
+    if (!DummyData.isSignedIn) {
+      logInAlertDialog(context);
+    } else {
+      navigatePush(context, QuizQuestionScreen());
+    }
   }
 
   final List<Widget> _dashboardScreen = [HomeScreen(), ProgressScreen(), ProfileScreen()];

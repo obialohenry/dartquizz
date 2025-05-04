@@ -1,15 +1,15 @@
 import 'package:dartquizz/src/components.dart';
 import 'package:dartquizz/src/config.dart';
-import 'package:dartquizz/src/model.dart';
-import 'package:dartquizz/src/screens.dart';
-import 'package:dartquizz/src/utils.dart';
+import 'package:dartquizz/src/providers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final dashboardProvider = ref.watch(dashboardViewModel);
     return Scaffold(
       backgroundColor: AppColors.kWhisperGray,
       appBar: AppBar(
@@ -50,12 +50,7 @@ class HomeScreen extends StatelessWidget {
                       return QuizzCard(
                         color: Colors.blue.withAlpha((0.9 * 255).toInt()),
                         onTap: () {
-                          if (!DummyData.isSignedIn) {
-                            logInAlertDialog(context);
-                          } else {
-                            navigatePush(context, QuizQuestionScreen());
-                          }
-                         
+                          dashboardProvider.checkUserSignedIn(context);
                         },
                         cardIcon: Icon(Icons.science_outlined, size: 32, color: Colors.black),
                         title: "Physics",
