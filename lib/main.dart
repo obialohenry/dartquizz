@@ -30,6 +30,7 @@ class _MyAppState extends State<MyApp> {
           //   primarySwatch: Colors.blue,
           //   textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
           // ),
+          builder: BotToastInit(),
           navigatorObservers: [BotToastNavigatorObserver()],
           home: child,
         );
