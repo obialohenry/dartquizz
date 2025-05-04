@@ -1,3 +1,4 @@
+import 'package:dartquizz/src/utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class UrlLacncher {
@@ -6,7 +7,8 @@ class UrlLacncher {
     if (await canLaunchUrl(phoneUri)) {
       await launchUrl(phoneUri);
     } else {
-      throw 'Could not launch $phoneUri';
+      showToast(msg: "Could not launch $phoneUri", isError: true);
+     
     }
   }
 
@@ -25,7 +27,7 @@ class UrlLacncher {
     if (await canLaunchUrl(emailUri)) {
       await launchUrl(emailUri);
     } else {
-      throw 'Could not launch $emailUri';
+      showToast(msg: "Could not launch $emailUri", isError: true);
     }
   }
 
@@ -39,7 +41,7 @@ class UrlLacncher {
     if (await canLaunchUrl(whatsappUri)) {
       await launchUrl(whatsappUri, mode: LaunchMode.externalApplication);
     } else {
-      throw 'Could not open whatsapp number $phoneNumber';
+      showToast(msg: 'Could not open whatsapp number $phoneNumber', isError: true);
     }
   }
 
@@ -48,7 +50,8 @@ class UrlLacncher {
     if (await canLaunchUrl(gitHubUri)) {
       await launchUrl(gitHubUri, mode: LaunchMode.externalApplication);
     } else {
-      throw 'Could not launch $gitHubUri';
+      showToast(msg: "Could not launch $gitHubUri", isError: true);
+      
     }
   }
 }
