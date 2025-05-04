@@ -1,3 +1,4 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:dartquizz/src/config.dart';
 import 'package:dartquizz/src/screens.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +30,7 @@ class _MyAppState extends State<MyApp> {
           //   primarySwatch: Colors.blue,
           //   textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
           // ),
+          navigatorObservers: [BotToastNavigatorObserver()],
           home: child,
         );
       },
