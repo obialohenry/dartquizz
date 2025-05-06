@@ -18,11 +18,10 @@ class HomeViewModel extends ChangeNotifier {
   Future<void> dartQuizzes() async {
     try {
       // await Future.delayed(Duration(milliseconds: 3));
-      final stringFormat = await rootBundle.loadString('assets/json/dart_quiz');
+      final stringFormat = await rootBundle.loadString('assets/json/dart_quiz.json');
       final decodedData = jsonDecode(stringFormat);
       _quizzes =
-          // (decodedData as List)
-          decodedData.map((element) => DartQuizResponseModel.fromJson(element)).toList();
+          (decodedData as List).map((element) => DartQuizResponseModel.fromJson(element)).toList();
 
       logger.i("Dart quiz List: $_quizzes");
     } catch (e, s) {
