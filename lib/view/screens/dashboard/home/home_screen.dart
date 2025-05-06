@@ -1,8 +1,10 @@
 import 'package:dartquizz/src/components.dart';
 import 'package:dartquizz/src/config.dart';
+import 'package:dartquizz/src/model.dart';
 import 'package:dartquizz/src/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
@@ -10,6 +12,7 @@ class HomeScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final dashboardProvider = ref.watch(dashboardViewModel);
+    final homeProvider = ref.watch(homeViewModel);
     return Scaffold(
       backgroundColor: AppColors.kWhisperGray,
       appBar: AppBar(
@@ -46,16 +49,21 @@ class HomeScreen extends ConsumerWidget {
               child: ListView(
                 physics: const BouncingScrollPhysics(),
                 children:
-                    List.generate(5, (index) {
+                    List.generate(homeProvider.quizzes.length, (index) {
+                      DartQuizResponseModel quiz = homeProvider.quizzes[index];
                       return QuizzCard(
                         color: Colors.blue.withAlpha((0.9 * 255).toInt()),
                         onTap: () {
                           dashboardProvider.checkUserSignedIn(context);
                         },
-                        cardIcon: Icon(Icons.science_outlined, size: 32, color: Colors.black),
-                        title: "Physics",
-                        description:
-                            'Basic physics Multiple Choice Questions (MCQ) to practice basic physics quiz answers',
+                        time: homeProvider.quizTime[index] ?? "ERROR",
+                        cardIcon: FaIcon(
+                          FontAwesomeIcons.dartLang,
+                          size: 32.0.spMin,
+                          color: Colors.black,
+                        ),
+                        title: quiz.title ?? "ERROR",
+                        description: quiz.description ?? "ERROR",
                       );
                     }).toList(),
               ),
@@ -76,6 +84,7 @@ class QuizzCard extends StatelessWidget {
     // required this.cardIconColor,
     required this.cardIcon,
     required this.onTap,
+    required this.time,
   });
   final String title;
   final Color color;
@@ -83,6 +92,7 @@ class QuizzCard extends StatelessWidget {
   // final Color cardIconColor;
   final Widget cardIcon;
   final VoidCallback onTap;
+  final String time;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -128,7 +138,7 @@ class QuizzCard extends StatelessWidget {
                           children: [
                             Icon(Icons.quiz, size: 16.spMin, color: Colors.grey),
                             Gap(4),
-                            TextView(text: fiveQuizzes, fontSize: 12.spMin, color: Colors.grey),
+                            TextView(text: tenQuizzes, fontSize: 12.spMin, color: Colors.grey),
                           ],
                         ),
                         Gap(16),
@@ -136,7 +146,7 @@ class QuizzCard extends StatelessWidget {
                           children: [
                             Icon(Icons.access_time, size: 16.spMin, color: Colors.grey),
                             Gap(4),
-                            TextView(text: fifteenMins, fontSize: 12.spMin, color: Colors.grey),
+                            TextView(text: "$time mins", fontSize: 12.spMin, color: Colors.grey),
                           ],
                         ),
                       ],

@@ -16,7 +16,9 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
     // TODO: implement initState
     super.initState();
     final dashboardProvider = ref.read(dashboardViewModel);
+    final homeProvider = ref.read(homeViewModel);
     dashboardProvider.checkUser();
+    homeProvider.dartQuizzes();
   }
 
   @override
