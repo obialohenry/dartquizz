@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "319264081179",
+    "project_id": "dart-quizz",
+    "storage_bucket": "dart-quizz.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319264081179:android:d476a04395f94fb1b83fbe",
+        "android_client_info": {
+          "package_name": "com.example.dartquizz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcxtZX7uaNzvtt9VN3q6v3NhFltCuIzC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

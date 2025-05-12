@@ -6,11 +6,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class HomeScreen extends ConsumerWidget {
+class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends ConsumerState<HomeScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    final dashboardProvider = ref.read(dashboardViewModel);
+    final homeProvider = ref.read(homeViewModel);
+    dashboardProvider.checkUser();
+    homeProvider.dartQuizzes();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final dashboardProvider = ref.watch(dashboardViewModel);
     final homeProvider = ref.watch(homeViewModel);
     return Scaffold(
