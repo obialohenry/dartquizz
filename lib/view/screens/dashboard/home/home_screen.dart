@@ -21,7 +21,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final dashboardProvider = ref.read(dashboardViewModel);
     final homeProvider = ref.read(homeViewModel);
     dashboardProvider.checkUser();
-    homeProvider.dartQuizzes();
+    homeProvider.uploadData();
   }
 
   @override

@@ -1,9 +1,11 @@
 [
   {
+    "id": "level_1",
     "title": "Beginner Level",
     "description": "Foundational Dart programming concepts for newcomers to the language. Test your knowledge of basic syntax, variables, functions, and data structures.",
     "questions": [
       {
+        "id": "level_1_q1",
         "question": "What is the correct way to declare a variable in Dart that cannot be reassigned?",
         "options": [
           "var name = \"John\";",
@@ -14,6 +16,7 @@
         "answer": "final name = \"John\";"
       },
       {
+        "id": "level_1_q2",
         "question": "Which of the following is the correct way to create a list in Dart?",
         "options": [
           "var list = array[1, 2, 3];",
@@ -24,6 +27,7 @@
         "answer": "var list = [1, 2, 3];"
       },
       {
+        "id": "level_1_q3",
         "question": "What does the `?` operator do in the expression `String? name`?",
         "options": [
           "Makes the variable private",
@@ -34,6 +38,7 @@
         "answer": "Makes the variable nullable"
       },
       {
+        "id": "level_1_q4",
         "question": "How do you print text to the console in Dart?",
         "options": [
           "console.log(\"Hello\");",
@@ -44,6 +49,7 @@
         "answer": "print(\"Hello\");"
       },
       {
+        "id": "level_1_q5",
         "question": "Which of the following is the correct way to define a function in Dart?",
         "options": [
           "function add(a, b) { return a + b; }",
@@ -54,6 +60,7 @@
         "answer": "int add(int a, int b) { return a + b; }"
       },
       {
+        "id": "level_1_q6",
         "question": "What is the entry point function for a Dart program?",
         "options": [
           "start()",
@@ -64,6 +71,7 @@
         "answer": "main()"
       },
       {
+        "id": "level_1_q7",
         "question": "What is the correct way to comment multiple lines of code in Dart?",
         "options": [
           "// This is a comment",
@@ -74,6 +82,7 @@
         "answer": "/* This is a comment */"
       },
       {
+        "id": "level_1_q8",
         "question": "Which keyword is used to import a library in Dart?",
         "options": [
           "include",
@@ -84,6 +93,7 @@
         "answer": "import"
       },
       {
+        "id": "level_1_q9",
         "question": "What is the default value of a boolean variable in Dart if not initialized?",
         "options": [
           "false",
@@ -94,6 +104,7 @@
         "answer": "null"
       },
       {
+        "id": "level_1_q10",
         "question": "How do you define a string with multiple lines in Dart?",
         "options": [
           "var s = \"Line 1 \\n Line 2\";",
@@ -106,10 +117,12 @@
     ]
   },
   {
+    "id": "level_2",
     "title": "Intermediate Level",
     "description": "Advanced Dart concepts for programmers with basic language proficiency. Test your understanding of null safety, collections, error handling, and object-oriented principles.",
     "questions": [
       {
+        "id": "level_2_q1",
         "question": "What's the difference between `final` and `const` in Dart?",
         "options": [
           "No difference, they can be used interchangeably",
@@ -120,6 +133,7 @@
         "answer": "final variables can be set only once; const variables are compile-time constants"
       },
       {
+        "id": "level_2_q2",
         "question": "Which collection type in Dart uses key-value pairs?",
         "options": [
           "List",
@@ -130,6 +144,7 @@
         "answer": "Map"
       },
       {
+        "id": "level_2_q3",
         "question": "What does the `=>` symbol represent in Dart?",
         "options": [
           "Lambda expression",
@@ -140,6 +155,7 @@
         "answer": "Arrow function (shorthand for one-line functions)"
       },
       {
+        "id": "level_2_q4",
         "question": "How do you handle exceptions in Dart?",
         "options": [
           "try-catch-finally",
@@ -150,6 +166,7 @@
         "answer": "try-catch-finally"
       },
       {
+        "id": "level_2_q5",
         "question": "What is the purpose of the `late` keyword in Dart?",
         "options": [
           "To make a variable immutable",
@@ -160,6 +177,7 @@
         "answer": "To declare a variable that will be initialized later"
       },
       {
+        "id": "level_2_q6",
         "question": "Which of the following is used to check if an object is of a specific type in Dart?",
         "options": [
           "isinstance(obj, Type)",
@@ -170,6 +188,7 @@
         "answer": "obj is Type"
       },
       {
+        "id": "level_2_q7",
         "question": "What is a mixin in Dart?",
         "options": [
           "A class that can be used to add functionality to other classes",
@@ -180,6 +199,7 @@
         "answer": "A class that can be used to add functionality to other classes"
       },
       {
+        "id": "level_2_q8",
         "question": "How do you implement an interface in Dart?",
         "options": [
           "class MyClass implements Interface {}",
@@ -190,6 +210,7 @@
         "answer": "class MyClass implements Interface {}"
       },
       {
+        "id": "level_2_q9",
         "question": "What is the purpose of the `async` and `await` keywords in Dart?",
         "options": [
           "To perform synchronous operations in the background",
@@ -200,6 +221,7 @@
         "answer": "To handle asynchronous operations more easily"
       },
       {
+        "id": "level_2_q10",
         "question": "What is the purpose of the `..` (cascade) operator in Dart?",
         "options": [
           "To perform null-aware operations",
@@ -212,10 +234,12 @@
     ]
   },
   {
+    "id": "level_3",
     "title": "Senior Level",
     "description": "Expert-level Dart challenges for experienced developers. Test your mastery of advanced language features, memory management, concurrency, and type system nuances.",
     "questions": [
       {
+        "id": "level_3_q1",
         "question": "What is the difference between `identical()` and `==` in Dart?",
         "options": [
           "identical() checks if two references point to the same object, while == compares values",
@@ -226,6 +250,7 @@
         "answer": "identical() checks if two references point to the same object, while == compares values"
       },
       {
+        "id": "level_3_q2",
         "question": "What is a factory constructor in Dart and when would you use it?",
         "options": [
           "A constructor that always creates a new instance of a class",
@@ -236,6 +261,7 @@
         "answer": "A constructor that can return an instance from a cache or a subtype"
       },
       {
+        "id": "level_3_q3",
         "question": "What is the purpose of the `call()` method in a Dart class?",
         "options": [
           "To make an object callable like a function",
@@ -246,6 +272,7 @@
         "answer": "To make an object callable like a function"
       },
       {
+        "id": "level_3_q4",
         "question": "Which of the following correctly describes Dart isolates?",
         "options": [
           "They are lightweight threads with shared memory",
@@ -256,6 +283,7 @@
         "answer": "They are separate execution contexts that don't share memory"
       },
       {
+        "id": "level_3_q5",
         "question": "What does the `covariant` keyword do in Dart?",
         "options": [
           "Forces runtime type checking for method parameters",
@@ -266,6 +294,7 @@
         "answer": "Allows a method parameter in a subclass to have a subtype of the type in the superclass"
       },
       {
+        "id": "level_3_q6",
         "question": "What is the purpose of the `part` and `part of` directives in Dart?",
         "options": [
           "To split a library across multiple files",
@@ -276,6 +305,7 @@
         "answer": "To split a library across multiple files"
       },
       {
+        "id": "level_3_q7",
         "question": "What are extension methods in Dart?",
         "options": [
           "Methods that extend the functionality of existing classes",
@@ -286,6 +316,7 @@
         "answer": "Methods that extend the functionality of existing classes"
       },
       {
+        "id": "level_3_q8",
         "question": "Which of the following is true about generics in Dart?",
         "options": [
           "Dart doesn't support generics",
@@ -296,6 +327,7 @@
         "answer": "Dart has erased generics (type information is removed at runtime)"
       },
       {
+        "id": "level_3_q9",
         "question": "What is the purpose of the `get` and `set` keywords in Dart?",
         "options": [
           "To define getters and setters for class properties",
@@ -306,6 +338,7 @@
         "answer": "To define getters and setters for class properties"
       },
       {
+        "id": "level_3_q10",
         "question": "Which statement correctly describes Dart's sound null safety?",
         "options": [
           "It's a compiler optimization that removes null checks",
@@ -318,10 +351,12 @@
     ]
   },
   {
+    "id": "level_4",
     "title": "Flutter Integration",
     "description": "Test your knowledge of using Dart within Flutter applications. Questions cover widget building, state management, and Flutter-specific Dart patterns.",
     "questions": [
       {
+        "id": "level_4_q1",
         "question": "In Flutter, what is the purpose of the `BuildContext` parameter in the build method?",
         "options": [
           "To access the theme and media queries",
@@ -332,6 +367,7 @@
         "answer": "To access the theme and media queries"
       },
       {
+        "id": "level_4_q2",
         "question": "Which Dart feature is heavily used in Flutter's widget composition pattern?",
         "options": [
           "Mixins",
@@ -342,6 +378,7 @@
         "answer": "Named constructors"
       },
       {
+        "id": "level_4_q3",
         "question": "When using Dart streams in Flutter, what widget should you use to build UI based on stream events?",
         "options": [
           "ListenableBuilder",
@@ -352,6 +389,7 @@
         "answer": "StreamBuilder"
       },
       {
+        "id": "level_4_q4",
         "question": "What is the purpose of `key` parameters in Flutter widgets from a Dart perspective?",
         "options": [
           "For encryption of widget data",
@@ -362,6 +400,7 @@
         "answer": "To help Flutter identify widgets across rebuilds"
       },
       {
+        "id": "level_4_q5",
         "question": "How does Dart's `async` and `await` functionality help in Flutter applications?",
         "options": [
           "It makes Flutter animations smoother",
@@ -372,6 +411,7 @@
         "answer": "It allows non-blocking operations like API calls without freezing the UI"
       },
       {
+        "id": "level_4_q6",
         "question": "Which Dart feature enables the Flutter SDK to implement widget trees efficiently?",
         "options": [
           "Type inference",
@@ -382,6 +422,7 @@
         "answer": "Immutability and functional programming concepts"
       },
       {
+        "id": "level_4_q7",
         "question": "In Flutter, how does Dart help implement the setState mechanism?",
         "options": [
           "Through static typing",
@@ -392,6 +433,7 @@
         "answer": "Through closures and function context"
       },
       {
+        "id": "level_4_q8",
         "question": "Which Dart collection is most appropriate for storing widget keys in Flutter?",
         "options": [
           "List",
@@ -402,6 +444,7 @@
         "answer": "Map"
       },
       {
+        "id": "level_4_q9",
         "question": "How are Dart Streams typically used in Flutter state management?",
         "options": [
           "For creating database connections",
@@ -412,6 +455,7 @@
         "answer": "For handling continuous data flows like user input or network events"
       },
       {
+        "id": "level_4_q10",
         "question": "What Dart language feature makes Flutter's hot reload possible?",
         "options": [
           "Just-in-time (JIT) compilation",
@@ -424,10 +468,12 @@
     ]
   },
   {
+    "id": "level_5",
     "title": "Dart Performance & Optimization",
     "description": "Deep dive into Dart performance techniques and optimization strategies. Covers memory management, compilation modes, and advanced language features for building efficient applications.",
     "questions": [
       {
+        "id": "level_5_q1",
         "question": "Which Dart compilation mode produces the smallest and fastest production code?",
         "options": [
           "JIT (Just-In-Time)",
@@ -438,6 +484,7 @@
         "answer": "AOT (Ahead-Of-Time)"
       },
       {
+        "id": "level_5_q2",
         "question": "In Dart, what technique can you use to avoid multiple memory allocations in performance-critical code?",
         "options": [
           "Using `final` for all variables",
@@ -448,6 +495,7 @@
         "answer": "Object pooling and reuse"
       },
       {
+        "id": "level_5_q3",
         "question": "How does using `const` constructors improve Dart application performance?",
         "options": [
           "They allow for compile-time instance creation and reuse",
@@ -458,6 +506,7 @@
         "answer": "They allow for compile-time instance creation and reuse"
       },
       {
+        "id": "level_5_q4",
         "question": "What Dart feature can help reduce memory fragmentation in long-running applications?",
         "options": [
           "Manual memory management",
@@ -468,6 +517,7 @@
         "answer": "Generational garbage collection"
       },
       {
+        "id": "level_5_q5",
         "question": "When optimizing Dart code, why might you choose `List.filled()` over `List.generate()`?",
         "options": [
           "For better memory layout and fewer allocations",
@@ -478,6 +528,7 @@
         "answer": "For better memory layout and fewer allocations"
       },
       {
+        "id": "level_5_q6",
         "question": "Which technique helps optimize Dart applications with a large number of similar objects?",
         "options": [
           "Using global variables",
@@ -488,6 +539,7 @@
         "answer": "Implementing the Flyweight pattern"
       },
       {
+        "id": "level_5_q7",
         "question": "In Dart, what is the performance benefit of using `Uint8List` instead of regular `List<int>`?",
         "options": [
           "It uses less memory and has faster operations for numeric processing",
@@ -498,6 +550,7 @@
         "answer": "It uses less memory and has faster operations for numeric processing"
       },
       {
+        "id": "level_5_q8",
         "question": "How can the Dart `@pragma` annotation help with performance?",
         "options": [
           "By forcing methods to be inlined",
@@ -508,6 +561,7 @@
         "answer": "By forcing methods to be inlined"
       },
       {
+        "id": "level_5_q9",
         "question": "What's the primary performance advantage of using Dart isolates?",
         "options": [
           "They reduce compile time",
@@ -518,6 +572,7 @@
         "answer": "They enable true parallel execution without shared memory issues"
       },
       {
+        "id": "level_5_q10",
         "question": "When optimizing JSON parsing in Dart, what approach typically yields the best performance?",
         "options": [
           "Using third-party libraries",
